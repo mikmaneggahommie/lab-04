@@ -38,3 +38,14 @@ function makeWithdrawal(withdrawalAmount) {
         }
     }
 }
+function makeTransfer(receiverAccountNumber, transferAmount){
+    if (transferAmount > balance){
+        console.log("Dear customer you don't have enough balance to make this amount of transfer!!");
+    }else{
+        balance = balance - transferAmount;
+        console.log("Transfer made successfully! ");
+        console.log("$" + transferAmount + " has been transferred from your account to the account of: " + receiverAccountNumber);
+        thankYou();
+        return;
+    }
+}
