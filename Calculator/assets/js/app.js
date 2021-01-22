@@ -35,3 +35,38 @@ function multipleNumberReceiver() {
         setOfNumbers[i] = prompt("Your Number " + (i + 1));
     }
 }
+(function(){
+    
+    choice = prompt("Choose 1 for Addition, 2 for Subtraction, 3 for Multiplication, 4 for Division");
+
+   
+    if(choice == "1"){
+        console.log("Addition")
+        multipleNumberReceiver();
+        addition(multipleNumberReceiver);    
+    }
+    
+    else if(choice == "2"){
+        console.log("Subtraction");
+        let firstNumber = prompt("Your 1st number: ");
+        let secondNumber = prompt("Your second Number: ");
+        subtraction(firstNumber, secondNumber);
+    }
+   
+    else if(choice == "3"){
+        console.log("Multiplication");
+        multipleNumberReceiver();
+        multiplication(setOfNumbers);
+    }
+    
+    else if(choice == "4"){
+        console.log("Division");
+        let firstNumber = prompt("Your 1st number: ");
+        let secondNumber = prompt("Your second Number: ");
+        division(firstNumber, secondNumber);  
+    }
+
+    else{
+        console.log("Wrong Choice!!");
+    }
+})();
